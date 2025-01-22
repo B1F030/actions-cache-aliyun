@@ -1,6 +1,6 @@
-name: 'Cache S3'
-description: 'actions/cache@v2 for AWS S3 and compatible software (forked Actions)'
-author: 'whywaita'
+name: 'Cache Aliyun'
+description: 'actions/cache@v2 for Aliyun OSS and compatible software (forked Actions)'
+author: 'B1F030'
 inputs:
   path:
     description: 'A list of files, directories, and wildcard patterns to cache and restore'
@@ -27,22 +27,22 @@ inputs:
     default: 'false'
     required: false
   aws-s3-bucket:
-    description: 'An AWS S3 bucket to save cache'
+    description: 'An Aliyun OSS bucket to save cache'
     required: true
   aws-access-key-id:
-    description: 'An AWS access key id to access the bucket'
+    description: 'An Aliyun access key id to access the bucket'
     required: false
   aws-secret-access-key:
-    description: 'An AWS secret access key to access the bucket'
+    description: 'An Aliyun secret access key to access the bucket'
     required: false
   aws-session-token:
-    description: 'An AWS session token to access the bucket'
+    description: 'An Aliyun session token to access the bucket'
     required: false
   aws-region:
-    description: 'An AWS region where the bucket is located'
+    description: 'An Aliyun region where the bucket is located'
     required: false
   aws-endpoint:
-    description: 'An endpoint of AWS S3 (for compatible software)'
+    description: 'An endpoint of Aliyun OSS (for compatible software)'
     required: false
   aws-s3-bucket-endpoint:
     description: 'Whether to use the bucket name as the endpoint for this request.'
@@ -56,7 +56,7 @@ outputs:
   cache-hit:
     description: 'A boolean value to indicate an exact match was found for the primary key'
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'dist/restore/index.js'
   post: 'dist/save/index.js'
   post-if: success()
