@@ -1,6 +1,6 @@
-# whywaita/actions-cache-s3
+# B1F030/actions-cache-s3
 
-`whywaita/actions-cache-s3` is a forked Action from [@actions/cache](https://github.com/actions/cache).
+`B1F030/actions-cache-s3` is a forked Action from [@actions/cache](https://github.com/actions/cache).
 
 This Action provides Amazon Web Services S3 backend (and compatible software) for @actions/cache.
 
@@ -10,7 +10,7 @@ It supports assuming credentials from `aws-actions/configure-aws-credentials` di
 
 ```yaml
 - name: Cache multiple paths
-  uses: whywaita/actions-cache-s3@v2
+  uses: B1F030/actions-cache-s3@v2
   with:
     path: |
       ~/cache
@@ -28,7 +28,7 @@ It supports assuming credentials from `aws-actions/configure-aws-credentials` di
     aws-s3-force-path-style: true                       # Optional
 ```
 
-Please see [actions.yml](https://github.com/whywaita/actions-cache-s3/blob/main/action.yml) about input parameters.
+Please see [actions.yml](https://github.com/B1F030/actions-cache-s3/blob/main/action.yml) about input parameters.
 # Cache action
 
 This action allows caching dependencies and build outputs to improve workflow execution time.
