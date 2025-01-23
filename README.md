@@ -10,7 +10,7 @@ It supports assuming credentials from `aws-actions/configure-aws-credentials` di
 
 ```yaml
 - name: Cache multiple paths
-  uses: B1F030/actions-cache-s3@v2
+  uses: B1F030/actions-cache-aliyun@v0.2
   with:
     path: |
       ~/cache
