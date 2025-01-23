@@ -1,8 +1,8 @@
-# B1F030/actions-cache-s3
+# B1F030/actions-cache-aliyun
 
-`B1F030/actions-cache-s3` is a forked Action from [@actions/cache](https://github.com/actions/cache).
+`B1F030/actions-cache-aliyun` is a forked Action from [@actions/cache](https://github.com/actions/cache).
 
-This Action provides Amazon Web Services S3 backend (and compatible software) for @actions/cache.
+This Action provides Aliyun OSS backend (and compatible software) for @actions/cache.
 
 It supports assuming credentials from `aws-actions/configure-aws-credentials` directly from `env`, or you can supply them through inputs.
 
