@@ -24,7 +24,7 @@ It supports assuming credentials from `aws-actions/configure-aws-credentials` di
     aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # Optionally supply session token from aws-actions/configure-aws-credentials
     aws-region: us-east-1                               # Optional
     aws-endpoint: https://example.com                   # Optional
-    aws-s3-bucket-endpoint: false                       # Optional
+    aws-s3-bucket-endpoint: true                        # Optional
     aws-s3-force-path-style: true                       # Optional
 ```
 
