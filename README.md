@@ -9,8 +9,23 @@ It supports assuming credentials from `aws-actions/configure-aws-credentials` di
 ## Usage
 
 ```yaml
+# 参考配置（向阿里云 oss 读取或写入缓存）：
+- name: Cache from oss
+  uses: B1F030/actions-cache-aliyun@v0.1
+  with:
+    aws-endpoint: https://oss-cn-hangzhou-internal.aliyuncs.com
+    aws-access-key-id: ${{ secrets.ALIYUN_OSS_ACCESSKEY_ID }}
+    aws-secret-access-key: ${{ secrets.ALIYUN_OSS_ACCESSKEY_SECRET }}
+    aws-region: oss-cn-hangzhou
+    aws-s3-bucket: ${{ vars.ALIYUN_OSS_BUCKET_GITHUB_ACTION_CACHE }}
+    path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+    key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+    restore-keys: |
+      ${{ runner.os }}-pnpm-store-
+
+# 官方文档参数解释
 - name: Cache multiple paths
-  uses: B1F030/actions-cache-aliyun@v0.2
+  uses: B1F030/actions-cache-aliyun@v0.1
   with:
     path: |
       ~/cache
